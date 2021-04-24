@@ -1,0 +1,8 @@
+th{
+  border-bottom:1px solid #dddddd;
+  padding:8px;
+}
+
+tbody > tr:nth-of-type(2n+1) {
+  background:#fafafa;
+}
