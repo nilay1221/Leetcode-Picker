@@ -2,13 +2,15 @@ import React,{useState} from 'react';
 import DifficultyTag from 'components/DifficultyTag/DifficultyTag';
 import {CheckIcon,ThumbUpIcon,ThumbDownIcon} from '@heroicons/react/solid';
 import './Problem.css';
+
+
 const Problem = ({id,problem,onStatusChange}) => {
   
-  const [solved,setSolve] = useState(false);
+  const [solved,setSolve] = useState(problem.status);
   //const [active,setActive] = useState(false);
   const handleChange = () => {
     setSolve(!solved);
-    onStatusChange(!solved);
+    onStatusChange(!solved,id);
   }
 
   return (
@@ -17,7 +19,7 @@ const Problem = ({id,problem,onStatusChange}) => {
           {solved ? (<CheckIcon className="h-5 w-5 text-green-600" />) : " "}
         </td>
         <td>{id+1}</td>
-        <td><a target="_blank" className="text-blue-500" href={`https://leetcode.com/problems/${problem.titleSlug}`}>{problem.title}</a></td>
+        <td><a target="_blank" rel="noreferrer" className="text-blue-500" href={`https://leetcode.com/problems/${problem.titleSlug}`}>{problem.title}</a></td>
         <td>
           <div className="flex flex-row justify-center items-center">
             <ThumbUpIcon className="h-5 w-5 text-green-500" />

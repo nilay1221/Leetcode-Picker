@@ -1,56 +1,15 @@
 import React from 'react';
 import Problem from 'components/Problem/Problem';
-import {useTable} from 'react-table';
 import './ProblemsList.css';
 
-const columns = [
-  {
-    Header: " ",
-    accessor:"solved",
-  },
-  {
-    Header: "Id",
-    accessor:"questionId"
-  },
-  {
-    Header:"Title",
-    accessor:"title"
-  },
-  {
-    accessor:"titleSlug"
-  },
-  {
-    Header:"Likes",
-    accessor:"likes"
-  },
-  {
-    Header:"Dislikes",
-    accessor:"dislikes",
-  },
-  {
-    Header:"Difficulty",
-    accessor:"difficulty"
-  },
-  {
-    Header:"Status",
-    accessor:"status",
-  }
-];
 
 
 const ProblemsList = ({problems,onStatusChange}) => {
   //problems = [1,2,3];
-  console.log(problems);
-  const {
-    getTableProps,
-    getTableBodyProps,
-    headerGroups,
-    rows,
-    prepareRow
-  } = useTable({columns,data:problems});
+  // console.log(problems);
 
   return (
-    <table className="w-full" {...getTableBodyProps()}>
+    <table className="w-full">
       <thead>
         <tr>
           <th> </th>
