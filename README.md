@@ -11,5 +11,9 @@ A simple website to view Leetcode problems according to likes and dislikes.
 
 1. Does not work in Private Mode
 
+## Todo
+
+- [ ] Responsive table with dynamic filtering and sorting.
+
 
 ### Happy Leetcoding 🤓
