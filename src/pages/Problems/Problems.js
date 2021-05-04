@@ -50,6 +50,9 @@ const Home = (props) => {
               return {...row,solved,status:solved};
             });
             console.log(json);
+           const solved = json.filter((problem) => problem.solved);
+            console.log(`Solved ${solved.length} problems`);
+           setSolveProblem(solved.length);
            setTitle(storedData.title);
            setProblems(json);
            setLoading(false);
